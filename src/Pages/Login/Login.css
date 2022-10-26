@@ -1,0 +1,12 @@
+.loginWidth {
+    width: 500px;
+    height: 500px;
+}
+
+
+@media screen and (max-width: 1056px) {
+    .loginWidth {
+        width: 90%;
+        height: 100%;
+    }
+}

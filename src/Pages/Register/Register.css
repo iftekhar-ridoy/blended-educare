@@ -31,3 +31,16 @@
     color: green;
     font-weight: 600;
 }
+
+
+
+.registerWidth {
+    width: 500px;
+}
+
+
+@media screen and (max-width: 500px) {
+    .registerWidth {
+        width: 90%;
+    }
+}
