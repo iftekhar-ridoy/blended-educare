@@ -1,5 +1,8 @@
 import Main from "../../layout/Main/Main";
 import Blog from "../../Pages/Blog/Blog";
+import CourseCategory from "../../Pages/CourseCategory/CourseCategory";
+import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
+import CoursePurchase from "../../Pages/CoursePurchase/CoursePurchase";
 import Courses from "../../Pages/Courses/Courses";
 import FAQ from "../../Pages/FAQ/FAQ";
 import Home from "../../Pages/Home/Home";
@@ -35,8 +38,29 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses',
-                element: <Courses></Courses>
+                element: <Courses></Courses>,
+                loader: () => fetch('http://localhost:5000/courses')
             },
+            {
+                path: '/courses',
+                element: <CourseCategory></CourseCategory>,
+                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+
+            },
+
+            {
+                path: '/courses/:id',
+                element: <CourseDetails></CourseDetails>,
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                }
+            },
+
+            {
+                path: '/coursePurchase',
+                element: <CoursePurchase></CoursePurchase>
+            },
+
             {
                 path: '/blog',
                 element: <Blog></Blog>

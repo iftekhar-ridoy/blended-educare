@@ -18,41 +18,47 @@ const Footer = () => {
             <div className='text-center'>
                 <p className='display-6 fw-bold text-success'>Blended Edu-Care</p>
                 <p>KhordoShaptana, Airport Road, <br />Lalmonirhat.</p>
-                <p><Link className='textLink'>iftekharulislam.ridoy@gmail.com</Link></p>
+                <p>© 2022 BEC, Inc. All Rights Reserved</p>
+
             </div>
             <div className='text-center'>
                 <div>
-                    <p className='my-0 py-0'><Link to='/' className='my-1 textLink'>
+                    <p className='my-0 py-1'><Link to='/' className='my-1 textLink'>
                         Home
                     </Link></p>
-                    <p className='my-0 py-0'><Link to='/courses' className='my-1 textLink'>
+                    <p className='my-0 py-1'><Link to='/courses' className='my-1 textLink'>
                         Courses
                     </Link></p>
-                    <p className='my-0 py-0'><Link to='/faq' className='my-1 textLink'>
+                    <p className='my-0 py-1'><Link to='/faq' className='my-1 textLink'>
                         FAQ
                     </Link></p>
-                    <p className='my-0 py-0'><Link to='/blog' className='my-1 textLink'>
+                    <p className='my-0 py-1'><Link to='/blog' className='my-1 textLink'>
                         Blog
                     </Link></p>
-                    <p className='my-0 py-0'><Link to='/deadlink' className='my-1 textLink'>
+                    <p className='my-0 py-1'><Link to='/deadlink' className='my-1 textLink'>
                         DeadLink
                     </Link></p>
                 </div>
-                <p><small>Copyright coming soon</small></p>
+
             </div>
             <div className='text-center'>
-                {
-                    user?.uid ?
-                        <>
-                            <p>You are logged in as: <span> <Link to='/profile' className='textLink'>{user?.displayName ? user.displayName : user.email}</Link> </span> <span onClick={handleLogOut}> <Link to='/' className='textLink'> (Log Out)</Link></span></p>
+                <p><Link
+                    className='textLink'>iftekharulislam.ridoy@gmail.com</Link>
+                </p>
+                <p>
+                    {
+                        user?.uid ?
+                            <>
+                                <p>You are logged in as: <span> <Link to='/profile' className='textLink'>{user?.displayName ? user.displayName : user.email}</Link> </span> <span onClick={handleLogOut}> <Link to='/' className='textLink'> (Log Out)</Link></span></p>
 
-                        </>
-                        :
-                        <>
-                            <p>You are not logged in. (<Link to='/login' className='textLink'>Log In</Link>)</p>
-                        </>
+                            </>
+                            :
+                            <>
+                                <p>You are not logged in. (<Link to='/login' className='textLink'>Log In</Link>)</p>
+                            </>
 
-                }
+                    }
+                </p>
             </div>
         </div>
     );

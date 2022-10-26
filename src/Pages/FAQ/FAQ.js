@@ -7,8 +7,10 @@ const FAQ = () => {
             <p className='text-center display-4 text-success fw-semibold'>FAQs</p>
             <p className='text-center fs-5'>Everything you want to know about Blended Edu-Care</p>
             <p className='text-center mb-5'>Select from the following list of Product and Technical FAQs to find answers to commonly raised questions. If you are a new member of one of the services below, we encourage you to read through the relevent articles.</p>
-            <Accordion defaultActiveKey="0" flush>
-                <Accordion.Item eventKey="0">
+
+
+            <Accordion className='aWidthOf mx-auto' defaultActiveKey="0" flush>
+                <Accordion.Item eventKey="0" className='mb-3'>
                     <Accordion.Header>Accordion Item #1</Accordion.Header>
                     <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -20,7 +22,7 @@ const FAQ = () => {
                         culpa qui officia deserunt mollit anim id est laborum.
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="1">
+                <Accordion.Item eventKey="1" className='mb-3'>
                     <Accordion.Header>Accordion Item #2</Accordion.Header>
                     <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -32,7 +34,7 @@ const FAQ = () => {
                         culpa qui officia deserunt mollit anim id est laborum.
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="2">
+                <Accordion.Item eventKey="2" className='mb-3'>
                     <Accordion.Header>Accordion Item #3</Accordion.Header>
                     <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -44,7 +46,7 @@ const FAQ = () => {
                         culpa qui officia deserunt mollit anim id est laborum.
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="3">
+                <Accordion.Item eventKey="3" className='mb-3'>
                     <Accordion.Header>Accordion Item #4</Accordion.Header>
                     <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -56,7 +58,7 @@ const FAQ = () => {
                         culpa qui officia deserunt mollit anim id est laborum.
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="4">
+                <Accordion.Item eventKey="4" className='mb-3'>
                     <Accordion.Header>Accordion Item #5</Accordion.Header>
                     <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -68,7 +70,7 @@ const FAQ = () => {
                         culpa qui officia deserunt mollit anim id est laborum.
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="5">
+                <Accordion.Item eventKey="5" className='mb-3'>
                     <Accordion.Header>Accordion Item #6</Accordion.Header>
                     <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

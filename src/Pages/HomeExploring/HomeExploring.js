@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const HomeExploring = () => {
     return (
-        <div className='my-5 pt-5 container text-center'>
+        <div className='my-5 pt-5 aWidthOf mx-auto text-center'>
             <div>
                 <p className='fs-2'>The Blended EduCare program: what is it?</p>
 
@@ -14,7 +14,7 @@ const HomeExploring = () => {
             <div className='my-5'>
                 <form className="d-flex registerWidth mx-auto border border-1 rounded p-1" role="search">
                     <input className="form-control me-2 border border-0" type="search" placeholder="Search Course" aria-label="Search" />
-                    <Link to='/faq'>
+                    <Link to='/courses'>
                         <button className="btn btn-outline-success">
                             Search
                         </button>

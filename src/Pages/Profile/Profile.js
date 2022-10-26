@@ -1,8 +1,8 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Button, Form, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+// import { Link } from 'react-router-dom';
+// import { ToastContainer } from 'react-toastify';
 import { AuthContext } from '../../context/AuthProvider/Authprovider';
 
 const Profile = () => {
