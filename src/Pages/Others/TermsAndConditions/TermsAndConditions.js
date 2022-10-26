@@ -22,7 +22,7 @@ const TermsAndConditions = () => {
                     </li>
                 </ul>
             </p>
-            <p className='text-center'>Go back to <Link to='/register'>Register</Link></p>
+            <p className='text-center'>Go back to <Link to='/register' className='textLink'>Register</Link></p>
         </div>
     );
 };
