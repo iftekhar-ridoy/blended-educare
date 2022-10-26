@@ -5,7 +5,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../../context/AuthProvider/Authprovider';
 
 const GoogleAndGithub = () => {
-    const { signInGoogle, signInGithub } = useContext(AuthContext);
+    const { signInGoogle, signInGithub, setUser } = useContext(AuthContext);
 
     // ---google signIn starts here---
     const googleProvider = new GoogleAuthProvider();
@@ -29,6 +29,7 @@ const GoogleAndGithub = () => {
         signInGithub(githubProvider)
             .then(result => {
                 const user = result.user;
+                setUser(user);
                 console.log(user);
             })
             .catch(error => {

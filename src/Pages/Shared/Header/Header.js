@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Image } from 'react-bootstrap';
+import { Button, Image, Tooltip } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,6 +7,7 @@ import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/Images/blended-educare.jpg';
 import { AuthContext } from '../../../context/AuthProvider/Authprovider';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -54,10 +55,26 @@ const Header = () => {
                             <Link to='/profile' className='my-1 d-flex align-items-center'>
                                 {
                                     user?.uid ?
-                                        <Image
-                                            style={{ height: '40px', width: '40px' }} roundedCircle
-                                            src={user?.photoURL}
-                                        ></Image>
+                                        <>
+                                            <OverlayTrigger
+                                                placement="bottom"
+                                                overlay={<Tooltip id="button-tooltip-2">{user?.displayName}</Tooltip>}
+                                            >
+                                                {({ ref, ...triggerHandler }) => (
+                                                    <nav
+                                                        {...triggerHandler}
+                                                        className="d-inline-flex align-items-center"
+                                                    >
+                                                        <Image
+                                                            style={{ height: '40px', width: '40px' }}
+                                                            ref={ref}
+                                                            roundedCircle
+                                                            src={user?.photoURL}
+                                                        />
+                                                    </nav>
+                                                )}
+                                            </OverlayTrigger>
+                                        </>
                                         :
                                         <FaUser className='text-black ms-2 my-1'></FaUser>
                                 }

@@ -7,6 +7,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/Authprovider';
 import GoogleAndGithub from '../Shared/GoogleAndGithub/GoogleAndGithub';
 import './Login.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const { signIn, setLoading } = useContext(AuthContext);
@@ -37,9 +39,10 @@ const Login = () => {
 
                 if (user.emailVerified) {
                     navigate(from, { replace: true });
+                    toast.success('Login Successful');
                 }
                 else {
-                    alert('Please Verify Your Email Address');
+                    toast.error('Please Verify Your Email Address');
                 }
             })
             .catch(error => {
@@ -91,6 +94,17 @@ const Login = () => {
                 <p className='d-block text-danger'>
                     {error}
                 </p>
+
+                <ToastContainer position="top-center"
+                    autoClose={2000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="dark" />
             </Form>
 
             <GoogleAndGithub></GoogleAndGithub>

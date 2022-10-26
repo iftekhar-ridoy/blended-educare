@@ -3,10 +3,13 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import toast, { Toaster } from 'react-hot-toast';
+// import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/Authprovider';
-import GoogleAndGithub from '../Shared/GoogleAndGithub/GoogleAndGithub';
+// import GoogleAndGithub from '../Shared/GoogleAndGithub/GoogleAndGithub';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Register.css';
 
 const Register = () => {
@@ -33,7 +36,7 @@ const Register = () => {
                 form.reset();
                 handleUpdateUserProfile(name, photoURL);
                 handleEmailVerification();
-                alert('Please verify you email');
+                toast.warn('Please verify you email');
             })
             .catch(error => {
                 console.error(error);
@@ -139,6 +142,18 @@ const Register = () => {
                 <p className='d-block text-danger'>
                     {error}
                 </p>
+
+                <ToastContainer position="top-center"
+                    autoClose={2000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="dark" />
+
             </Form>
 
             <p className='mt-3 text-center'>
