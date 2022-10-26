@@ -5,7 +5,7 @@ import { AuthContext } from '../../context/AuthProvider/Authprovider';
 const Profile = () => {
     const { user } = useContext(AuthContext);
     return (
-        <div>
+        <div className='navHeight'>
             <p>This is My Profile</p>
             <img src={user?.photoURL} alt="" />
             <p>Name: {user?.displayName}</p>

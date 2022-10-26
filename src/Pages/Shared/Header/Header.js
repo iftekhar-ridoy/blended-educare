@@ -20,7 +20,7 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar collapseOnSelect className='mb-4' expand="lg" bg="light" variant="light">
+            <Navbar collapseOnSelect className='mb-5' expand="lg" bg="light" variant="light" fixed="top">
                 <Container>
                     <Navbar.Brand className='d-flex align-items-center'>
                         <Image
@@ -53,7 +53,7 @@ const Header = () => {
                         <Nav>
                             <Link to='/profile' className='my-1 d-flex align-items-center'>
                                 {
-                                    user?.photoURL ?
+                                    user?.uid ?
                                         <Image
                                             style={{ height: '40px', width: '40px' }} roundedCircle
                                             src={user?.photoURL}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
@@ -16,7 +17,7 @@ const BlankRoutes = () => {
                 <p className='fw-semibold fs-3 text-center'>Error Code: 404</p>
                 <p className='fs-4 text-center'>We can't seem to find the page you are looking for.</p>
                 <p className='text-center'>Here is a helpful link instead:</p>
-                <p className='text-center'>Go back to <Link to='/' className='textLink fw-bold'> Blended Edu-Care</Link></p>
+                <p className='text-center'>Go back to <Link to='/' className='textLink fw-bold'> Blended Edu-Care  <FaArrowRight></FaArrowRight> </Link></p>
             </div>
         </div>
     );

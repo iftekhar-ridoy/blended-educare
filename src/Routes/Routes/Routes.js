@@ -1,5 +1,7 @@
 import Main from "../../layout/Main/Main";
 import Blog from "../../Pages/Blog/Blog";
+import Courses from "../../Pages/Courses/Courses";
+import FAQ from "../../Pages/FAQ/FAQ";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import TermsAndConditions from "../../Pages/Others/TermsAndConditions/TermsAndConditions";
@@ -32,8 +34,16 @@ export const routes = createBrowserRouter([
                 element: <TermsAndConditions></TermsAndConditions>
             },
             {
+                path: '/courses',
+                element: <Courses></Courses>
+            },
+            {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/faq',
+                element: <FAQ></FAQ>
             },
             {
                 path: '/profile',

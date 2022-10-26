@@ -33,7 +33,7 @@ const Register = () => {
                 form.reset();
                 handleUpdateUserProfile(name, photoURL);
                 handleEmailVerification();
-                toast.success('Please verify you email');
+                alert('Please verify you email');
             })
             .catch(error => {
                 console.error(error);
@@ -67,7 +67,7 @@ const Register = () => {
 
 
     return (
-        <div className='mx-auto p-3 shadow-lg rounded-3 registerWidth'>
+        <div className='mx-auto p-3 shadow-lg rounded-3 registerWidth navHeight'>
             <p className='fs-2 fw-bold text-center'>Sign Up</p>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicName">
@@ -140,8 +140,6 @@ const Register = () => {
                     {error}
                 </p>
             </Form>
-
-            <GoogleAndGithub></GoogleAndGithub>
 
             <p className='mt-3 text-center'>
                 Already Have An Account?

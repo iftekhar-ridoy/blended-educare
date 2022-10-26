@@ -1,14 +1,13 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { Button } from 'react-bootstrap';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../../context/AuthProvider/Authprovider';
 
 const GoogleAndGithub = () => {
-    const { signInGoogle } = useContext(AuthContext);
+    const { signInGoogle, signInGithub } = useContext(AuthContext);
 
     // ---google signIn starts here---
-
     const googleProvider = new GoogleAuthProvider();
     const handleGoogleSignIn = () => {
         signInGoogle(googleProvider)
@@ -22,6 +21,23 @@ const GoogleAndGithub = () => {
     }
     // ---google signIn ends here---
 
+
+
+    // ---github signIn starts here---
+    const githubProvider = new GithubAuthProvider();
+    const handleGithubSignIn = () => {
+        signInGithub(githubProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
+    // ---github signIn ends here---
+
+
     return (
         <div>
             <div className="hr-sect mt-3">OR</div>
@@ -34,6 +50,7 @@ const GoogleAndGithub = () => {
                     Google
                 </Button>
                 <Button
+                    onClick={handleGithubSignIn}
                     variant="outline-dark" className='d-flex align-items-center justify-content-center w-50'>
                     <FaGithub className='me-2'>
                     </FaGithub>

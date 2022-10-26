@@ -1,11 +1,11 @@
 import React from 'react';
 
-const FAQ = () => {
+const CourseSummery = () => {
     return (
         <div className='navHeight'>
-            <h1>FAG here</h1>
+            <h2>Summery</h2>
         </div>
     );
 };
 
-export default FAQ;
+export default CourseSummery;

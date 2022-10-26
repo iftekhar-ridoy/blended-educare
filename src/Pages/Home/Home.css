@@ -1,3 +1,7 @@
+.navHeight {
+    margin-top: 110px;
+}
+
 .homeImage {
     height: 500px;
 }
@@ -14,7 +18,7 @@
     }
 
     .homeImage {
-        width: 90%;
+        width: 100%;
         margin-top: 20px;
     }
 }
