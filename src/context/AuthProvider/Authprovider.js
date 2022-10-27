@@ -10,7 +10,6 @@ const auth = getAuth(app)
 const Authprovider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-
     // for user state 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -64,13 +63,15 @@ const Authprovider = ({ children }) => {
 
     // sign out 
     const logOut = () => {
-        setLoading(true);
+        // setLoading(true);
+        console.log(signOut(auth));
         return signOut(auth);
     }
 
 
     const authInfo = {
         user,
+        setUser,
         signIn,
         signUp,
         updateUserProfile,

@@ -57,7 +57,10 @@ export const routes = createBrowserRouter([
             },
 
             {
-                path: '/coursePurchase',
+                path: '/coursePurchase/:id',
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                },
                 element: <PrivateRoutes><CoursePurchase></CoursePurchase></PrivateRoutes>
             },
 

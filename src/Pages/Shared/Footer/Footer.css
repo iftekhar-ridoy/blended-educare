@@ -2,3 +2,25 @@
     margin-top: 150px;
     overflow-y: hidden;
 }
+
+
+@media screen and (max-width: 767px) {
+    .footer {
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .flexItem-3 {
+        display: none;
+    }
+
+    .flexItem-1,
+    .flexItem-2 {
+        margin: 0 auto;
+    }
+
+    .sml {
+        padding-bottom: 20px;
+    }
+}

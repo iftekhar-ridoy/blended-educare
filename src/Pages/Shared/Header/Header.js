@@ -3,12 +3,13 @@ import { Button, Image, Tooltip } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/Images/blended-educare.jpg';
 import { AuthContext } from '../../../context/AuthProvider/Authprovider';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import { HiOutlineUserCircle } from 'react-icons/hi';
+import './Header.css';
+import ReactSwitch from "react-switch";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -51,6 +52,10 @@ const Header = () => {
                             <Link to='/deadLink' className='mx-2 my-1 text-black text-decoration-none'>
                                 DeadLink
                             </Link>
+                            <Link to='/deadLink' className='mx-2 my-1 text-black text-decoration-none'>
+                                <ReactSwitch />
+                            </Link>
+
                         </Nav>
                         <Nav>
                             <Link to='/profile' className='my-1 d-flex align-items-center'>
@@ -94,10 +99,10 @@ const Header = () => {
                                     </>
                                     :
                                     <>
-                                        <Link to='/login' className='ms-2 my-auto text-black text-decoration-none'>
+                                        <Link to='/login' className='ms-2 my-auto text-black text-decoration-none border border-2 border-success px-3 py-1 rounded-pill'>
                                             Login
                                         </Link>
-                                        <Link to='/register' className='ms-2 my-auto text-black text-decoration-none'>
+                                        <Link to='/register' className='ms-2 my-auto text-black text-decoration-none border border-2 border-success px-3 py-1 rounded-pill'>
                                             Register
                                         </Link>
                                     </>

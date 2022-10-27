@@ -4,7 +4,7 @@ import './TermsAndCondition.css';
 
 const TermsAndConditions = () => {
     return (
-        <div className='mx-auto shadow-sm p-3 mb-5 bg-body rounded-3 widdth'>
+        <div className='mx-auto shadow-sm p-3 mb-5 bg-body rounded-3 widdth navHeight'>
             <p className='fs-3 text-center underline'>Blended Edu-Care Terms of Use</p>
             <p>
                 <ul>

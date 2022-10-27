@@ -2,8 +2,8 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='navHeight'>
-            <h2>Blog section</h2>
+        <div className='navHeight aWidthOf mx-auto'>
+            <h2 className='text-center'>Blog section</h2>
         </div>
     );
 };

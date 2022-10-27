@@ -11,7 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-    const { signIn, setLoading } = useContext(AuthContext);
+    const { signIn, setLoading, setUser } = useContext(AuthContext);
     const [error, setError] = useState('');
 
 
@@ -38,12 +38,14 @@ const Login = () => {
                 setError('');
 
                 if (user.emailVerified) {
+                    setUser(user);
                     navigate(from, { replace: true });
                     toast.success('Login Successful');
                 }
                 else {
                     toast.error('Please Verify Your Email Address');
                 }
+
             })
             .catch(error => {
                 console.error(error);
@@ -91,20 +93,11 @@ const Login = () => {
                     className='w-100'>
                     Login
                 </Button>
+                <ToastContainer position="top-center" />
                 <p className='d-block text-danger'>
                     {error}
                 </p>
 
-                <ToastContainer position="top-center"
-                    autoClose={2000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="dark" />
             </Form>
 
             <GoogleAndGithub></GoogleAndGithub>

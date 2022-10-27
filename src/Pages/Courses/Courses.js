@@ -8,7 +8,6 @@ import CourseCategory from '../CourseCategory/CourseCategory';
 const Courses = () => {
     const [categories, setCategories] = useState([]);
 
-
     useEffect(() => {
         fetch('http://localhost:5000/courses-categories')
             .then(res => res.json())

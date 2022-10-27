@@ -5,7 +5,7 @@ import CourseSummery from '../CourseSummery/CourseSummery';
 
 const CourseCategory = () => {
     const courses = useLoaderData();
-    console.log(courses);
+    // console.log(courses);
     return (
         <div>
             < div className='cardGridd' >
