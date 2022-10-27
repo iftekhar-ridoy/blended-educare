@@ -39,12 +39,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses',
                 element: <Courses></Courses>,
-                loader: () => fetch('http://localhost:5000/courses')
+                loader: () => fetch('https://assignment10-blended-educare-server.vercel.app/courses')
             },
             {
                 path: '/courses',
                 element: <CourseCategory></CourseCategory>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment10-blended-educare-server.vercel.app/category/${params.id}`)
 
             },
 
@@ -52,14 +52,14 @@ export const routes = createBrowserRouter([
                 path: '/courses/:id',
                 element: <CourseDetails></CourseDetails>,
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                    return fetch(`https://assignment10-blended-educare-server.vercel.app/courses/${params.id}`)
                 }
             },
 
             {
                 path: '/coursePurchase/:id',
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                    return fetch(`https://assignment10-blended-educare-server.vercel.app/courses/${params.id}`)
                 },
                 element: <PrivateRoutes><CoursePurchase></CoursePurchase></PrivateRoutes>
             },
