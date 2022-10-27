@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Image, Tooltip } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -9,11 +9,16 @@ import { AuthContext } from '../../../context/AuthProvider/Authprovider';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import { HiOutlineUserCircle } from 'react-icons/hi';
 import './Header.css';
-import ReactSwitch from "react-switch";
+import Switch from "react-switch";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
     console.log(user);
+
+    const [checked, setChecked] = useState(false);
+    const handleChange = nextChecked => {
+        setChecked(nextChecked);
+    };
 
     const handleLogOut = () => {
         logOut()
@@ -52,9 +57,18 @@ const Header = () => {
                             <Link to='/deadLink' className='mx-2 my-1 text-black text-decoration-none'>
                                 DeadLink
                             </Link>
-                            <Link to='/deadLink' className='mx-2 my-1 text-black text-decoration-none'>
-                                <ReactSwitch />
-                            </Link>
+                            <>
+                                <label className='my-auto'>
+                                    <Switch
+                                        onChange={handleChange}
+                                        checked={checked}
+                                        className="react-switch"
+                                    />
+                                </label>
+                                <p className='my-auto'>
+                                    <span className='ms-2'>{checked ? "Dark" : "Light"}</span> Mode.
+                                </p>
+                            </>
 
                         </Nav>
                         <Nav>

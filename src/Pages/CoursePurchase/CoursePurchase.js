@@ -14,7 +14,7 @@ const CoursePurchase = () => {
             <p className='fs-1 fw-semibold text-center text-success my-3'>{course.title}</p>
 
             <div className='d-md-flex justify-content-evenly'>
-                <Card style={{ width: '350px', margin: '10px auto' }}>
+                <Card style={{ width: '300px', margin: '10px auto' }}>
                     <Card.Header className="text-success fs-3 fw-bold text-center">
                         Free
                     </Card.Header>
@@ -36,7 +36,7 @@ const CoursePurchase = () => {
                 </Card>
 
 
-                <Card style={{ width: '350px', margin: '10px auto' }}>
+                <Card style={{ width: '300px', margin: '10px auto' }}>
                     <Card.Header className="text-success fs-3 fw-bold text-center">
                         Premium
                     </Card.Header>

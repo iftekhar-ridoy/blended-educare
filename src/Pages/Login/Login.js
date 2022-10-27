@@ -38,9 +38,9 @@ const Login = () => {
                 setError('');
 
                 if (user.emailVerified) {
-                    setUser(user);
                     navigate(from, { replace: true });
                     toast.success('Login Successful');
+                    setUser(user);
                 }
                 else {
                     toast.error('Please Verify Your Email Address');

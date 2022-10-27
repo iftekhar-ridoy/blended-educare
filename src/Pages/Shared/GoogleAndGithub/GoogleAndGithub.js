@@ -2,10 +2,15 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { Button } from 'react-bootstrap';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/Authprovider';
 
 const GoogleAndGithub = () => {
     const { signInGoogle, signInGithub, setUser } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     // ---google signIn starts here---
     const googleProvider = new GoogleAuthProvider();
@@ -13,6 +18,7 @@ const GoogleAndGithub = () => {
         signInGoogle(googleProvider)
             .then(result => {
                 const user = result.user;
+                navigate(from, { replace: true });
                 console.log(user);
             })
             .catch(error => {
