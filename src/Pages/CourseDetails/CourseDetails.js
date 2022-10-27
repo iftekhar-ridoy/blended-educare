@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { FaArrowCircleRight, FaChalkboardTeacher, FaRegClock } from 'react-icons/fa';
 import { HiOutlineCloudDownload } from "react-icons/hi";
-
 import Pdf from "react-to-pdf";
+
 
 const ref = React.createRef();
 
@@ -20,14 +20,12 @@ const CourseDetails = () => {
         <div className='navHeight aWidthOf mx-auto shadow rounded-3'>
             <Card className='border border-0'>
                 <Card.Body>
-                    <div className='d-flex align-items-center justify-content-between'>
+                    <div className='d-flex align-items-start justify-content-between'>
                         <p className='fs-2 mb-3 text-center'>{courseDetails.title}</p>
 
                         <Pdf targetRef={ref} filename="code-example.pdf">
                             {({ toPdf }) => (
-
-                                <p onClick={toPdf} className="mb-5 fs-2" ><HiOutlineCloudDownload></HiOutlineCloudDownload></p>
-
+                                <p onClick={toPdf} className="mb-5 fs-2 downLod" ><HiOutlineCloudDownload></HiOutlineCloudDownload></p>
                             )}
                         </Pdf>
                     </div>

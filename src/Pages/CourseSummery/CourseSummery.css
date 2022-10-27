@@ -9,6 +9,11 @@
     height: 230px;
 }
 
+.downLod:hover {
+    color: green;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .cardGridd {
         grid-template-columns: repeat(1, 1fr);
