@@ -4,15 +4,15 @@ Project Name: Blended Edu-Care
 
 ## Client Side Repo
 
-Client side repository link: [https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Armanul144894]
+Client side repository link:  https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Iftekharul152811
 
 ## Server Side Repo
 
-Client side repository link: [https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-Armanul144894]
+Client side repository link: https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-Iftekharul152811
 
 ## Live website link
 
-Live website link: [https://blended-learning-center.web.app/]
+Live website link: [https://blended-edu-care.web.app/]
 
 ## About this website
 
