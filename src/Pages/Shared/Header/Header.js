@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/Images/blended-educare.jpg';
 import { AuthContext } from '../../../context/AuthProvider/Authprovider';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import { HiOutlineUserCircle } from 'react-icons/hi';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -25,7 +26,7 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand className='d-flex align-items-center'>
                         <Image
-                            style={{ height: '40px' }} roundedCircle
+                            style={{ height: '50px' }} roundedCircle
                             src={logo}
                         ></Image>
                         <Link to='/' className='ms-2 text-decoration-none fw-bold text-success'>
@@ -66,7 +67,7 @@ const Header = () => {
                                                         className="d-inline-flex align-items-center"
                                                     >
                                                         <Image
-                                                            style={{ height: '40px', width: '40px' }}
+                                                            style={{ height: '50px', width: '50px', border: '1px solid grey', padding: '2px' }}
                                                             ref={ref}
                                                             roundedCircle
                                                             src={user?.photoURL}
@@ -76,7 +77,9 @@ const Header = () => {
                                             </OverlayTrigger>
                                         </>
                                         :
-                                        <FaUser className='text-black ms-2 my-1'></FaUser>
+                                        <Link to='/login'>
+                                            <HiOutlineUserCircle className='fs-1 ms-2 text-success'></HiOutlineUserCircle>
+                                        </Link>
                                 }
                             </Link>
                             {
@@ -85,16 +88,16 @@ const Header = () => {
                                         <Link to='/profile' className='text-decoration-none text-black fw-semibold my-auto ms-2'>
                                             { }
                                         </Link>
-                                        <Button variant="outline-secondary" onClick={handleLogOut} className='ms-2 my-1 rounded-3'>
+                                        <Button variant="outline-secondary" onClick={handleLogOut} className='ms-2 my-auto'>
                                             Sign Out
                                         </Button>
                                     </>
                                     :
                                     <>
-                                        <Link to='/' className='ms-2 my-1 text-black text-decoration-none'>
+                                        <Link to='/login' className='ms-2 my-auto text-black text-decoration-none'>
                                             Login
                                         </Link>
-                                        <Link to='/register' className='ms-2 my-1 text-black text-decoration-none'>
+                                        <Link to='/register' className='ms-2 my-auto text-black text-decoration-none'>
                                             Register
                                         </Link>
                                     </>

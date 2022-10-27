@@ -1,5 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
+import { FaFacebookSquare, FaMailBulk, FaPhoneSquareAlt } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/Authprovider';
 import './Footer.css'
@@ -35,15 +37,24 @@ const Footer = () => {
                     <p className='my-0 py-1'><Link to='/blog' className='my-1 textLink'>
                         Blog
                     </Link></p>
-                    <p className='my-0 py-1'><Link to='/deadlink' className='my-1 textLink'>
+                    <p className='my-0 pb-1'><Link to='/deadlink' className='my-1 textLink'>
                         DeadLink
                     </Link></p>
                 </div>
 
             </div>
             <div className='text-center'>
-                <p><Link
-                    className='textLink'>iftekharulislam.ridoy@gmail.com</Link>
+                <p className='mb-1'>
+                    <Link
+                        className='textLink'><FaPhoneSquareAlt className='fs-4'></FaPhoneSquareAlt> +8801302690768</Link>
+                </p>
+                <p className='mb-1'>
+                    <Link
+                        className='textLink'><FaFacebookSquare className='fs-4'></FaFacebookSquare> /iftekhar.ridoy07</Link>
+                </p>
+                <p>
+                    <Link
+                        className='textLink'><FaMailBulk className='fs-4'></FaMailBulk> iftekharulislam.ridoy@gmail.com</Link>
                 </p>
                 <p>
                     {

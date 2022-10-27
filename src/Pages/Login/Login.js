@@ -58,7 +58,7 @@ const Login = () => {
 
 
     return (
-        <div className='mx-auto p-3 shadow-sm rounded-3 loginWidth'>
+        <div className='mx-auto p-3 shadow-sm rounded-3 loginWidth navHeight'>
             <p className='fs-2 fw-bold text-center'>Sign In</p>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

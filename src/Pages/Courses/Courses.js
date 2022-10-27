@@ -19,12 +19,12 @@ const Courses = () => {
         <div className='navHeight'>
             <Container>
                 <Row>
-                    <Col lg='4' className='d-none d-lg-block'>
-                        <h4>Available Courses: {categories.length}</h4>
+                    <Col lg='4' className='d-none d-lg-block '>
+                        <h4 className='text-center mb-3'>Available Courses: {categories.length}</h4>
                         {
                             categories.map(category =>
                                 <p key={category.id}>
-                                    <Link to={`/courses/${category.id}`} className='textLink'><li>{category.name}</li></Link>
+                                    <Link to={`/courses/${category.id}`} className='textLink'><li className='border border-1 p-3 text-center rounded-3 shadow-sm'>{category.name}</li></Link>
                                 </p>)
                         }
                     </Col>

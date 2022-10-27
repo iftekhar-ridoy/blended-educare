@@ -8,15 +8,15 @@ const CourseCategory = () => {
     console.log(courses);
     return (
         <div>
-            <div className='cardGridd'>
+            < div className='cardGridd' >
                 {
                     courses.map(course => <CourseSummery
                         key={course._id}
                         course={course}
                     ></CourseSummery>)
                 }
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
