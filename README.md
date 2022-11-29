@@ -2,10 +2,6 @@
 
 ## Live website link https://blended-edu-care.web.app/
 
-## Client side repository link:  https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Iftekharul152811
-
-## Client side repository link: https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-Iftekharul152811
-
 ## About this website
 
 1. This website is create for educational purpose.
