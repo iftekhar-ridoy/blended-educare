@@ -57,7 +57,7 @@ const Header = () => {
                             <Link to='/deadLink' className='mx-2 my-1 text-black text-decoration-none'>
                                 DeadLink
                             </Link>
-                            <>
+                            {/* <>
                                 <label className='my-auto'>
                                     <Switch
                                         onChange={handleChange}
@@ -68,7 +68,7 @@ const Header = () => {
                                 <p className='my-auto'>
                                     <span className='ms-2'>{checked ? "Dark" : "Light"}</span> Mode.
                                 </p>
-                            </>
+                            </> */}
 
                         </Nav>
                         <Nav>
